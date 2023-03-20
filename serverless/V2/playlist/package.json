@@ -1,0 +1,21 @@
+{
+  "name": "playlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getPlaylistByStarsGenreData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1023.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "zip-webpack-plugin": "^4.0.1"
+  }
+}

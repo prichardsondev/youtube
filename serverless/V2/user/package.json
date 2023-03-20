@@ -1,0 +1,20 @@
+{
+  "name": "user",
+  "version": "1.0.0",
+  "description": "- createUserHandler.js\r   - handle request from api\r   - create song [createUserEntity.js] from body of request\r   - store data [createUserData.js]\r   - returns response",
+  "main": "createUserData.js",
+  "scripts": {
+    "bundle": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "zip-webpack-plugin": "^4.0.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1326.0"
+  }
+}
