@@ -4,8 +4,8 @@ AWS.config.update({
   region: "us-east-1",
   endpoint: "http://dynamodb.us-east-1.amazonaws.com",
   credentials: new AWS.SharedIniFileCredentials({
-    profile: "training",
+    profile: "sandbox",
   }),
 });
 
-module.exports = {AWS, tablename:"prichardson_youtube"};
+module.exports = {AWS, tablename:"youtube"};

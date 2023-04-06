@@ -1,6 +1,6 @@
 const { createUserData } = require("./createUserData");
 const { User } = require("./createUserEntitly");
-const { response } = require("./helper/handler_response");
+const { response } = require("../helper/handler_response");
 
 const handler = async (event) => {
 
@@ -12,7 +12,7 @@ const handler = async (event) => {
   });
 
   let {error} = await createUserData(user);
-  return response(error ? 500 : 200, JSON.stringify(user.toItem()));
+  return response(error ? 500 : 201, JSON.stringify(user.toItem()));
 };
 
 module.exports = { handler };

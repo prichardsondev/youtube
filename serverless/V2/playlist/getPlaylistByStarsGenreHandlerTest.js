@@ -1,14 +1,20 @@
 const { handler } = require("./getPlaylistByStarsGenreHandler");
 
 //Path parameters / .../user/genre/stars - point to resource
-//access from api gateway as https://.../PRICHARDSON/DYNAMODB/5
+//call api gateway as https://stageurl/PRICHARDSON/COUNTRY/5
 
 const event = {
   pathParameters: {
-    user: "PRICHARDSON",
-    genre: "DYNAMODB",
+    user: "JRICHARDSON",
+    genre: "COUNTRY",
     stars: 5
   },
 };
 
-handler(event);
+(async () => {
+  try {
+  let response = await handler(event);
+  console.log(response);
+  } catch (error) {
+    console.log(error);
+}})();

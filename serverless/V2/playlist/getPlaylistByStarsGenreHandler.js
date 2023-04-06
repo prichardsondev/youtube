@@ -1,6 +1,6 @@
 const { getPlaylist } = require("./getPlaylistByStarsGenreData");
 const { Playlist, generatePlaylist } = require("./getPlaylistByStarsGenreEntity");
-const { response } = require("./helper/handler_response");
+const { response } = require("../helper/handler_response");
 
 const handler = async (event) => {
   let {genre,stars,user} = event.pathParameters;
@@ -10,14 +10,12 @@ const handler = async (event) => {
     stars: stars
   });
 
-  console.log(playlistEntity);
+  //console.log(playlistEntity);
 
   try {
-    let items = await getPlaylist(playlistEntity);
-    console.log(items);
-    let playlist = {playlistEntity:generatePlaylist(items)}
-    console.log(playlist)
-    return response(200, playlist);
+    let {error, data} = await getPlaylist(playlistEntity);
+    let playlist = {playlistEntity:generatePlaylist(data)}
+    return response(error ? 500 : 200, JSON.stringify(playlist));
   } catch (error) {
     console.log(error);
     return response(400, { message: error });

@@ -1,5 +1,4 @@
-const {AWS,tablename} = require("./helper/credentials");
-const {generatePlaylist} = require("./getPlaylistByStarsGenreEntity");
+const {AWS,tablename} = require("../helper/credentials");
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
@@ -21,11 +20,9 @@ const getPlaylist = async (playlist) => {
     "Limit": 100
   };
 
-  
   try {
     let data = await dynamodb.query(params).promise();
-    console.log("...................", data);
-    return(data.Items);
+    return({"data":data.Items});
   } catch (error) {
     return error;
   }

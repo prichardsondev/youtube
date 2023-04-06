@@ -1,4 +1,4 @@
-//server - file we start
+//logic
 //app->router->controller->service->db
 
 const express = require("express");

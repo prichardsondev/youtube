@@ -1,10 +1,16 @@
 const { handler } = require("./createSongHandler");
 
 const event = {
-  body: "{\"username\":\"PRICHARDSON\",\"genre\":\"BA\",\"id\":\"qemWRToNYJY\",\"stars\":5}"
+  body: "{\"username\":\"JRICHARDSON\",\"genre\":\"COUNTRY\",\"id\":\"DQYNM6SjD_o\",\"stars\":5}"
 };
 
-handler(event);
+(async () => {
+  try {
+  let response = await handler(event);
+  console.log(response);
+  } catch (error) {
+    console.log(error);
+}})();
 
 
 

@@ -1,4 +1,4 @@
-const {AWS,tablename} = require("./helper/credentials");
+const {AWS,tablename} = require("../helper/credentials");
 
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 

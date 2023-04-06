@@ -1,7 +1,6 @@
-const stageUrl = "https://c4e5jgmf00.execute-api.us-east-1.amazonaws.com/dev";
+const stageUrl = "yourapigatewaystageurl";
 
 function addUser() {
-
   const form = document.getElementById("userdata");
   const formData = new FormData(form);
   let name = formData.get('name');
@@ -9,16 +8,16 @@ function addUser() {
   let username = formData.get('username');
 
   //"{\"username\":\"ALYTAR\",\"email\":\"alytar@gmail.com\",\"name\":\"Abigail Lytar\"}"
-  fetch(`${stageUrl}/user`, {
+  fetch(`${stageUrl}/users`, {
     method: 'POST',
     mode: 'cors',
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      username:username,
-      email:email,
-      name:name
+      username: username,
+      email: email,
+      name: name
     })
   })
     .then(function (data) {
@@ -27,10 +26,9 @@ function addUser() {
     .catch(function (error) {
       console.log('Request failure: ', error);
     });
-
 }
 
-function addSong() {
+function addSong () {
   const form = document.getElementById("songdata");
   const formData = new FormData(form);
   let user = formData.get('user');
@@ -39,17 +37,17 @@ function addSong() {
   let stars = formData.get('stars');
 
   //"{\"username\":\"PRICHARDSON\",\"genre\":\"FOO\",\"id\":\"qemWRToNYJY\",\"stars\":5}",
-  fetch(`${stageUrl}/song`, {
+  fetch(`${stageUrl}/songs`, {
     method: 'POST',
     mode: 'cors',
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      username:user,
-      genre:genre,
-      id:songid,
-      stars,stars
+      username: user,
+      genre: genre,
+      id: songid,
+      stars, stars
     })
   })
     .then(function (data) {
@@ -61,23 +59,21 @@ function addSong() {
 
 }
 
-function getPlaylist() {
+function  getPlaylist () {
+  console.log('playlist');
   const form = document.getElementById("playlistdata");
   const formData = new FormData(form);
   let user = formData.get('user');;
   let genre = formData.get('genre');
   let stars = formData.get('stars');
-
-  let url = `${stageUrl}/${user}/${genre}/${stars}`;
-
+  let url = `${stageUrl}/playlist/${user}/${genre}/${stars}`;
   console.log(url);
 
-  fetch(url)
+  fetch(`${stageUrl}/playlist/${user}/${genre}/${stars}`)
     .then(response => response.json())
-    .then(data => { 
-      window.open(data.playlistEntity); 
-      console.log(data) 
+    .then(data => {
+      console.log(data.playlist);
+      window.open(data.playlistEntity);
+      console.log(data)
     });
 }
-
-

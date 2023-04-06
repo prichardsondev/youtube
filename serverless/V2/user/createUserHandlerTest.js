@@ -4,12 +4,11 @@ const { handler } = require("./createUserHandler");
   note username must be unique to database
 */
 const event = {
-  body: "{\"username\":\"ALYTAR\",\"email\":\"alytar@gmail.com\",\"name\":\"Abigail Lytar\"}"
+  body: "{\"username\":\"JRICHARDSON\",\"email\":\"JRICHARDSON@gmail.com\",\"name\":\"Jaime Richardson\"}"
 };
 
 (async () => {
   try {
-  console.log('bunnies');
   let response = await handler(event);
   console.log(response);
   } catch (error) {
@@ -17,3 +16,15 @@ const event = {
 }})();
 
 
+//without iffe
+/*
+let myFun = async () => {
+  try {
+  let response = await handler(event);
+  console.log(response);
+  } catch (error) {
+    console.log(error);
+}};
+
+myFun()
+*/
