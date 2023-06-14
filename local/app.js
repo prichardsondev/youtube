@@ -6,6 +6,7 @@ const path = require("path");
 const routes = require("./router");
 
 const app = express();
+app.disable('etag').disable('x-powered-by');
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
