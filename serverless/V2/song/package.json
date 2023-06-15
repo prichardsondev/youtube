@@ -9,13 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "aws-sdk": "^2.1023.0"
-  },
-  "devDependencies": {
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "zip-webpack-plugin": "^4.0.1"
-  }
+  "license": "ISC"
 }

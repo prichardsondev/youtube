@@ -8,7 +8,7 @@ class User {
     key() {
       return {
         PK: `USER#${this.username}`,
-        SK: `USER#${this.username}`,
+        SK: `USER#${this.username}`
       };
     }
   
