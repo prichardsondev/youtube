@@ -16,7 +16,7 @@
   body: {
     username: "PRICHARDSON",
     email: "prichardsondev@gmail.com",
-    name: "Paul Richardson",
+    name: "Paul Richardson"
   }
 ```
 

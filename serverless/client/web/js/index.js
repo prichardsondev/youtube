@@ -73,7 +73,8 @@ function  getPlaylist () {
     .then(response => response.json())
     .then(data => {
       console.log(data.playlist);
-      window.open(data.playlistEntity);
+      let formed = JSON.parse(data);
+      window.open(formed.playlistEntity);
       console.log(data)
     });
 }
