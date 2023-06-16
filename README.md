@@ -1,5 +1,6 @@
 # AWS Serverless YouTube Playlist Builder
-
+  ## Video
+  [Video](https://youtu.be/5hYMTKk2w0U)
   ## Description
   AWS Serverless app using DynamoDB <-> Lambda <-> API Gateway <-> Client App (html, js, css)
 
