@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="index.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Create User</div>
+    <div class="content">
+      <form id="userdata">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name='name' placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="username"placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="button" value="Submit" onclick="addUser()">
+        </div>
+      </form>
+    </div>
+    <div class="title">Add Song</div>
+    <div class="content">
+      <form id="songdata">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="user"  placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Song ID</span>
+            <input type="text" name="songid" placeholder="Enter the song id" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Genre</span>
+            <input type="text" name="genre" placeholder="Enter song Genre" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Stars</span>
+            <input type="text" name="stars" placeholder="Enter stars [1-5]" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="button" value="Submit" onclick="addSong()">
+        </div>
+      </form>
+    </div>
+    <div class="title">Get Playlist</div>
+    <div class="content">
+      <form id="playlistdata">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="user" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Genre</span>
+            <input type="text" name="genre" placeholder="Enter song Genre" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Stars</span>
+            <input type="text" name="stars" placeholder="Enter stars [1-5]" required>
+          </div>
+        </div>
+        <div class="button">
+          <input id='getPlaylist' type="button" value="Submit" name="Submit" onclick="getPlaylist()">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="index.js" type="text/javascript"></script>
+
+</body>
+</html>
