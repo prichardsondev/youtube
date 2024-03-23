@@ -1,7 +1,7 @@
 const { handler } = require("./createSongHandler");
 
 const event = {
-  body: "{\"username\":\"BSUE\",\"genre\":\"COUNTRY\",\"id\":\"DQYNM6SjD_o\",\"stars\":1}"
+  body: "{\"username\":\"SBRIDGEWELL\",\"genre\":\"COUNTRY\",\"id\":\"Fr7oYjnt3bM\",\"stars\":5}"
 };
 
 (async () => {

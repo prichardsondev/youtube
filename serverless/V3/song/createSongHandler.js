@@ -13,10 +13,10 @@ const handler = async (event) => {
 
   try {
     let {error} = await createSongData(song);
+    console.log('error ...........', error);
     return response(error ? 500 : 201, JSON.stringify(song.toItem()));
   } catch (error) {
-    console.log(error);
-    return response(400, { message: error });
+    return response(error.$metadata?.httpStatusCode || 500, { message: error.message });;
   }
 };
 

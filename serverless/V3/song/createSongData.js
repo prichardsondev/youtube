@@ -1,7 +1,5 @@
 const {table,profile,region, ssoprofile} = require('./config.js');
 
-console.log(table,profile,region, ssoprofile);
-
 const { PutCommand, DynamoDBDocumentClient } = require("@aws-sdk/lib-dynamodb");
 
 const provider = ssoprofile=="yes" ? require("@aws-sdk/credential-provider-sso") :

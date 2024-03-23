@@ -5,6 +5,6 @@
 ##### cd V3
 ##### npm i //unless already done
 ##### cd V3/song
-##### modify createSongHandlerTest.js  //user must exist
+##### modify createSongHandlerTest.js
 ##### node createSongHandlerTest.js
 ##### let me know if it work -)
