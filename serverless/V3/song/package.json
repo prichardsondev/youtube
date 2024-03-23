@@ -1,0 +1,13 @@
+{
+  "name": "createSong",
+  "version": "1.0.0",
+  "description": "- createSongHandler.js\r   - handle request from api\r   - create song [createSongEntity.js] from body of request\r   - store data [createSongData.js]\r   - returns response",
+  "main": "createSongData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

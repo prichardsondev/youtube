@@ -4,7 +4,7 @@ const { handler } = require( "./createUserHandler.js");
   note username must be unique to database
 */
 const event = {
-  body: "{\"username\":\"SALLY\",\"email\":\"JRICHARDSON@gmail.com\",\"name\":\"Jaime Richardson\"}"
+  body: "{\"username\":\"BSUE\",\"email\":\"BSUE@gmail.com\",\"name\":\"Bobby Sue\"}"
 };
 
 (async () => {

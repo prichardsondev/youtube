@@ -1,7 +1,7 @@
 
 const { createUserData } = require( "./createUserData.js");
 const { User } = require( "./createUserEntitly.js");
-const { response } = require( "./helper/handler_response.js");
+const { response } = require( "../helper/handler_response.js");
 
 const handler = async (event) => {
 
