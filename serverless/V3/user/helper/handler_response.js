@@ -10,4 +10,4 @@ const response = (statusCode, data = {}) => {
     };
   };
   
-  export { response };
+  module.exports = { response };

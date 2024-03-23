@@ -30,4 +30,4 @@ class User {
     });
   };
   
-  export { User, userFromItem };
+  module.exports = { User, userFromItem };
