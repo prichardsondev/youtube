@@ -1,5 +1,5 @@
 {
-  "name": "createSong",
+  "name": "song",
   "version": "1.0.0",
   "description": "- createSongHandler.js\r   - handle request from api\r   - create song [createSongEntity.js] from body of request\r   - store data [createSongData.js]\r   - returns response",
   "main": "createSongData.js",
